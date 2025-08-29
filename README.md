@@ -1,2 +1,2 @@
 # Crop-project
-A web app that takes a leaf image as input and provide whether the plant is suffering from any disease.
+A web app that takes image of leaves as input and outputs the disease that the plant might be suffering from by analysing the deformations in shape and color of the given leaf.
