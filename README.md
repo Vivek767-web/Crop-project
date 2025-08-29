@@ -3,4 +3,5 @@ A web app that takes image of leaves as input and outputs the disease that the p
 
 Create a python virtual environment first.
 Install the necessary imports from requirements.txt 
-Use any public dataset to train
+Use any public dataset to train.
+Name the dataset folder as "dataset"
