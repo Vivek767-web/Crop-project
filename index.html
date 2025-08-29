@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Disease Detector</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+  <div class="bg-white shadow-xl rounded-2xl p-8 w-96 text-center">
+    <h1 class="text-2xl font-bold mb-4">🌱 Crop Disease Detector</h1>
+
+    <form method="POST" enctype="multipart/form-data" class="mb-4">
+      <input type="file" name="file" accept="image/*" required
+        class="block w-full text-sm text-gray-600 mb-4" />
+      <button type="submit"
+        class="bg-green-600 text-white px-4 py-2 rounded-xl hover:bg-green-700">
+        Upload & Predict
+      </button>
+    </form>
+
+    {% if filename %}
+      <img src="{{ url_for('static', filename='uploads/' + filename) }}" 
+           class="w-full rounded-xl shadow-md mb-4">
+      <p class="text-lg"><strong>Prediction:</strong> {{ label }}</p>
+      <p class="text-gray-600">Confidence: {{ conf }}%</p>
+    {% endif %}
+  </div>
+</body>
+</html>
